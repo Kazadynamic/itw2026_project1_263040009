@@ -13,7 +13,7 @@
       }
 
       .navbar {
-        background-color: #5b2903;
+        background-color: #FF9808;
         padding: 15px 50px;
         border-bottom: 2px solid #141414;
         overflow: auto;
@@ -24,7 +24,7 @@
 
       .navbar .nav-logo {
         float: left;
-        color: #f6efef;
+        color: #494848;
         font-size: 24px;
         text-decoration: none;
         letter-spacing: 1px;
@@ -43,7 +43,7 @@
       }
 
       .navbar .nav-menu li a {
-        color: #fff;
+        color: #494848;
         text-decoration: none;
         font-size: 14px;
         font-weight: bold;
@@ -65,3 +65,131 @@
       .navbar .nav-menu li a:hover::after {
         width: 100%;
       }
+      
+      
+        :root {
+        /* Warna Latar */
+        --surface-page: #ECCEA8;
+        --surface-secondary-hover: #A98585;
+
+        /* Warna Teks */
+        --text-heading: #494848;
+        --text-body: #494848;
+
+        /* Warna Aksi (Tombol) */
+        --action-primary-bg: #FF9808;
+        --action-primary-hover: #FF9808;
+        --action-primary-text: #ffffff;
+        --action-secondary-border: #A98585;
+
+        /* Tata Letak */
+        --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        --radius-control: 8px;
+        --container-padding: 8%;
+      }
+
+      /* Dasar */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-main);
+        background-color: var(--surface-page);
+        color: var(--text-body);
+        line-height: 1.6;
+      }
+
+      /* Struktur Utama Hero */
+      main {
+        width: 100%;
+      }
+
+      .Hero {
+        display: flex;
+        align-items: center;
+        min-height: 90vh;
+        padding: 4rem var(--container-padding);
+        background-color: var(--surface-page);
+      }
+
+      .hero-content {
+        max-width: 650px;
+      }
+
+      /* Konten di Dalam Hero */
+      .hero-content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.75rem);
+        font-weight: 800;
+        color: var(--text-heading);
+        line-height: 1.15;
+        margin-bottom: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-content p {
+        font-size: 1.125rem;
+        color: var(--text-body);
+        line-height: 1.75;
+        margin-bottom: 2.25rem;
+      }
+
+      /* Tombol Aksi */
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions a {
+        display: inline-block;
+        padding: 0.875rem 1.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: var(--radius-control);
+        transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      /* Tombol Utama (Projects Saya) */
+      .btn-primary {
+        background-color: var(--action-primary-bg);
+        color: var(--action-primary-text);
+        border: 1px solid transparent;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--action-primary-hover);
+        transform: translateY(-2px);
+      }
+
+      /* Tombol Sekunder (Hubungi Saya) */
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--text-heading);
+        border: 1px solid var(--action-secondary-border);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--surface-secondary-hover);
+        border-color: var(--text-heading);
+      }
+
+      /* 6. Tampilan Responsif */
+        @media (max-width: 768px) {
+        .hero {
+          min-height: 85vh;
+          padding: 3rem 6%;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+
+        .hero-actions a {
+          width: 100%;
+          text-align: center;
+        }
+       }
