@@ -204,10 +204,10 @@
 
       /* Tampilan Responsif */
         @media (max-width: 768px) {
-      .hero {
+        .hero {
         min-height: 85vh;
         padding: 3rem 6%;
-      }
+        }
 
       .hero-actions {
         flex-direction: column;
@@ -222,8 +222,73 @@
       .Hero > img {
         max-width: 240px;
         height: 240px;
-      }
-       }
+        }
+     }
 
-      
-      
+       /* About */
+      :root {
+        --bg-card: #FF9808;
+        --text-primary: #494848;
+        --text-secondary: #494848;
+        --border-color: #ECCEA8;
+        --accent-color: #494848;
+      }
+
+      .about-section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        color: var(--text-primary);
+      }
+
+      .about-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .about-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .about-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .about-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .about-card h3 {
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: var(--accent-color);
+      }
+
+      .about-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Menghapus margin bawah pada paragraf terakhir di tiap kartu */
+      .about-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Responsif untuk tablet dan HP */
+         @media (max-width: 768px) {
+        .about-list {
+          grid-template-columns: 1fr;
+        }
+      }
